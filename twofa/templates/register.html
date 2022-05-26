@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block container %}
-<div class="row centered-form">
+<div class="row-centered-form">
   <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-    <div class="panel panel-default">
+    <div class="panel-panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Quickstart Registration</h3>
+        <h3 class="panel-title"></h3>
       </div>
       <div class="panel-body">
         <form action="{% url 'register' %}" method="POST" role="form">
@@ -18,21 +18,25 @@
             {{ form.phone_number.errors }}
             {{ form.password.errors }}
 
-            <div class="row">
+            <div class="row"><h5>username</h5>
               {{ form.username }}
             </div>
-            <div class="row">
+            <div class="row"><h5>email</h5>
               {{ form.email }}
             </div>
-            <div class="row">
+            <div class="row"><h5>code(+996)</h5>
               {{ form.country_code }} {{ form.phone_number }}
             </div>
-            <div class="row">
+            <div class="row"><h5>password</h5>
               {{ form.password }} {{ form.confirm_password }}
             </div>
+            
+
+
+            
 
             <input type="submit" value="Register" class="btn btn-info btn-block">
-            <small style="float: right;"><a href="/login">Login</a></small>
+            <small style="float: right;"><a href="/login">Есть аккаунт?</a></small>
         </form>
       </div>
     </div>
